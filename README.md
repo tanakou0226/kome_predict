@@ -1,1 +1,3 @@
 # kome_predict
+
+UIも精度も全然…
