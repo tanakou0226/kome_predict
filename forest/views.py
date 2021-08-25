@@ -27,7 +27,6 @@ def index(request):
     title = None
     ans = "数値を入力してください"
     try:
-        title = request.GET["title"]
         a = request.GET["作付面積"]
         b = request.GET["気温平均最高"]
         c = request.GET["降水量合計"]
@@ -37,7 +36,7 @@ def index(request):
     except:
         pass
     params = {
-        'title' : title,
+        'title' : "お米の収穫量を予測！",
         'msg'   : '',
         "form"  : form,
         "pred"  : ans,
