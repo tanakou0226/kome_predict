@@ -21,7 +21,7 @@ def index(request):
         # 保存したモデルをロードする
         model = pickle.load(open(str(BASE_DIR) + '/data/model.sav', 'rb'))
         y_pred = model.predict(pre_test)
-        return y_pred
+        return int(y_pred[0])
 
     form = MyFirstForm()
     title = None
@@ -32,7 +32,7 @@ def index(request):
         c = request.GET["降水量合計"]
         d = request.GET["降水量最大10分間"]
         e = request.GET["最高気温"]
-        ans = pred(a,b,c,d,e)
+        ans = str(pred(a,b,c,d,e)) + "トンの予測です"
     except:
         pass
     params = {
