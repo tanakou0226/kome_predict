@@ -10,12 +10,30 @@
     <div class="container">
         <h1 class="display-4 m-4">{{ title }}</h1>
     </div>
+
     <div class="container">
         <form method="GET">
-            <div class="form-group">
-                <div class="col-sm-8">{{form.as_p}}</div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Title</label>
+                <input name="作付面積" type="text" class="form-control" />
             </div>
-            <button type="submit">保存</button>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Context</label>
+                <input name="気温平均最高" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Context</label>
+                <input name="降水量合計" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Context</label>
+                <input name="降水量最大10分間" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Context</label>
+                <input name="最高気温" type="text" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">予測</button>
         </form>
     </div>
 
